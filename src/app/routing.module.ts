@@ -13,7 +13,10 @@ export const routes: Routes = [
   {
     path: "observables",
     component: ObservablesComponent,
-    children: [{ path: "list" }]
+    children: [
+      { path: "list", component: ListComponent },
+      { path: "FromEvent", component: FromEventComponent }
+    ]
   }
   // {
   //   path: "",
