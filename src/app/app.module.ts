@@ -8,6 +8,7 @@ import { HeaderComponent } from "./includes/header/header.component";
 import { RoutingModule } from "./routing.module";
 import { PromiseComponent } from "./promise/promise.component";
 import { PostsService } from './promise/posts.service';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -15,7 +16,8 @@ import { PostsService } from './promise/posts.service';
     AppComponent,
     HelloComponent,
     HeaderComponent,
-    PromiseComponent
+    PromiseComponent,
+    ObservablesComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService]
