@@ -1,8 +1,16 @@
-a {
+.flex {
   display: flex;
-  justify-content: s;
-  color: red;
-  width: 100px;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.flex a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:green;
+  flex: 0 0 200px;
   height: 100px;
+  margin: 30px;
   border: 1px solid black;
 }
