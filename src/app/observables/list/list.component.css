@@ -1,0 +1,8 @@
+a {
+  display: flex;
+  justify-content: s;
+  color: red;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
