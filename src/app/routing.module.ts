@@ -3,8 +3,10 @@ import { RouterModule, Routes } from "@angular/router";
 // import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { HeaderComponent } from "./includes/header/header.component";
+import { PromiseComponent } from "./promise/promise.component";
+
 export const routes: Routes = [
-  // { path: "login", component: LoginComponent },
+  { path: "promise", component: PromiseComponent }
   // {
   //   path: "",
   //   pathMatch: "full",
