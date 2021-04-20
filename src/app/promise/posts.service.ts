@@ -1,22 +1,21 @@
-import { Component, OnInit } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
+class Post {
+  constructor(
+    public userId: number,
+    public id: string,
+    public title: string,
+    public body: string
+  ) {}
+}
 
-@Component({
-  selector: "app-promise",
-  templateUrl: "./promise.component.html"
-  // styleUrls: ['./promise.component.css']
-})
-export class PromiseComponent implements OnInit {
+@Injectable()
+export class PostsService {
   api: string = "https://jsonplaceholder.typicode.com/posts";
   data = [];
 
   constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.getPosts();
-  }
-
   getPosts() {
     const promise = new Promise((resolve, reject) => {
       const apiURL = this.api;
