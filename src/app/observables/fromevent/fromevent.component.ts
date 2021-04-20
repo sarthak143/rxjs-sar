@@ -13,9 +13,10 @@ export class FromEventComponent implements OnInit {
   @ViewChild() addBtn: ElementRef;
 
   ngOnInit() {
-        fromEvent(button, 'click'){
+        fromEvent(this.addBtn.nativeElement, 'click').subscribe(res =>{
 
-        }
+          console.log(res);
+        })
   }
 
 }
