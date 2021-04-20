@@ -9,6 +9,7 @@ import { RoutingModule } from "./routing.module";
 import { PromiseComponent } from "./promise/promise.component";
 import { PostsService } from './promise/posts.service';
 import { ObservablesComponent } from './observables/observables.component';
+import { FromEventComponent } from './observables/from-event/from-event.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -17,7 +18,8 @@ import { ObservablesComponent } from './observables/observables.component';
     HelloComponent,
     HeaderComponent,
     PromiseComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    FromEventComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService]
