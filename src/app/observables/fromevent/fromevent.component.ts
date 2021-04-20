@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-from-event',
@@ -9,7 +10,12 @@ export class FromEventComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild() addBtn: ElementRef;
+
   ngOnInit() {
+        fromEvent(button, 'click'){
+
+        }
   }
 
 }
