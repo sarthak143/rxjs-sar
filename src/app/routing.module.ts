@@ -5,10 +5,16 @@ import { HelloComponent } from "./hello.component";
 import { HeaderComponent } from "./includes/header/header.component";
 import { PromiseComponent } from "./promise/promise.component";
 import { ObservablesComponent } from "./observables/observables.component";
+import { FromEventComponent } from "./observables/fromevent/fromevent.component";
+import { ListComponent } from "./observables/list/list.component";
 
 export const routes: Routes = [
   { path: "promise", component: PromiseComponent },
-  { path: "observables", component: ObservablesComponent }
+  {
+    path: "observables",
+    component: ObservablesComponent,
+    children: [{ path: "list" }]
+  }
   // {
   //   path: "",
   //   pathMatch: "full",
