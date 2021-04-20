@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-
+import { PostsService } from "./posts.service";
 
 @Component({
   selector: "app-promise",
@@ -8,35 +7,15 @@ import { HttpClient } from "@angular/common/http";
   // styleUrls: ['./promise.component.css']
 })
 export class PromiseComponent implements OnInit {
-  api: string = "https://jsonplaceholder.typicode.com/posts";
-  data = [];
+  api: string;
+  data: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(public ps: PostsService) {}
 
   ngOnInit() {
-    this.getPosts();
-  }
-
-  getPosts() {
-    const promise = new Promise((resolve, reject) => {
-      const apiURL = this.api;
-      this.http
-        .get<Post[]>(apiURL)
-        .toPromise()
-        .then(
-          (res: any) => {
-            // Success
-            this.data = res.map((res: any) => {
-              return new Post(res.userId, res.id, res.title, res.body);
-            });
-            resolve();
-          },
-          err => {
-            // Error
-            reject(err);
-          }
-        );
-    });
-    return promise;
+    this.ps.getPosts();
+    this.data = this.ps.data;
+    // this.api = this.ps.api;
+    // console.log(this.data);
   }
 }

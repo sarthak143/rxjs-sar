@@ -28,6 +28,7 @@ export class PostsService {
             this.data = res.map((res: any) => {
               return new Post(res.userId, res.id, res.title, res.body);
             });
+            // console.log(this.data);
             resolve();
           },
           err => {
