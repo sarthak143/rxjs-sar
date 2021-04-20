@@ -4,9 +4,11 @@ import { RouterModule, Routes } from "@angular/router";
 import { HelloComponent } from "./hello.component";
 import { HeaderComponent } from "./includes/header/header.component";
 import { PromiseComponent } from "./promise/promise.component";
+import { ObservablesComponent } from "./observables/observables.component";
 
 export const routes: Routes = [
-  { path: "promise", component: PromiseComponent }
+  { path: "promise", component: PromiseComponent },
+  { path: "observables", component: ObservablesComponent }
   // {
   //   path: "",
   //   pathMatch: "full",
