@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild
+} from "@angular/core";
 import { fromEvent } from "rxjs";
 
 @Component({
@@ -6,12 +12,13 @@ import { fromEvent } from "rxjs";
   templateUrl: "./from-event.component.html",
   styleUrls: ["./from-event.component.css"]
 })
-export class FromEventComponent implements OnInit {
+export class FromEventComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   @ViewChild("addBtn") addBtn: ElementRef;
 
-  ngOnInit() {
+  ngOnInit() {}
+  ngAfterViewInit() {
     fromEvent(this.addBtn.nativeElement, "click").subscribe(res => {
       console.log(res);
     });
