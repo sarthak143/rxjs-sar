@@ -14,4 +14,11 @@
   margin: 30px;
   border: 1px solid black;
   border-radius: 5px;
+  transition: 0.1s ease-in;
+}
+.flex a:hover {
+  color: navy;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  transform: scale(1.05);
 }
