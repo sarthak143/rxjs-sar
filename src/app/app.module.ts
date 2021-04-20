@@ -9,7 +9,7 @@ import { RoutingModule } from "./routing.module";
 import { PromiseComponent } from "./promise/promise.component";
 import { PostsService } from './promise/posts.service';
 import { ObservablesComponent } from './observables/observables.component';
-import { FromEventComponent } from './observables/from-event/from-event.component';
+import { FromEventComponent } from './observables/fromevent/fromevent.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
