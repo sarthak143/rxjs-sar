@@ -10,6 +10,7 @@ import { PromiseComponent } from "./promise/promise.component";
 import { PostsService } from './promise/posts.service';
 import { ObservablesComponent } from './observables/observables.component';
 import { FromEventComponent } from './observables/fromevent/fromevent.component';
+import { ListComponent } from './observables/list/list.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -19,7 +20,8 @@ import { FromEventComponent } from './observables/fromevent/fromevent.component'
     HeaderComponent,
     PromiseComponent,
     ObservablesComponent,
-    FromEventComponent
+    FromEventComponent,
+    ListComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService]
