@@ -13,10 +13,18 @@ export class TimerIntervalComponent implements OnInit {
   constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
-    // const broadcastVideo = interval(1000);
+    const broadcastVideo = interval(1000);
     // timer(delay, interval) interval after a preset delay.
-    const broadcastVideo = timer(5000, 1000);
+    const broadcastVideoAfterDelay = timer(5000, 1000);
     this.videoSubs = broadcastVideo.subscribe(res => {
+      console.log(res);
+      this.obsMsg = "Video " + res;
+      this.addel.addList(this.obsMsg, "appendlist");
+      if (res >= 5) {
+        this.videoSubs.unsubscribe();
+      }
+    });
+    this.videoSubs = broadcastVideoAfterDelay.subscribe(res => {
       console.log(res);
       this.obsMsg = "Video " + res;
       this.addel.addList(this.obsMsg, "appendlist");
