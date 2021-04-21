@@ -15,7 +15,9 @@ export const routes: Routes = [
     component: ObservablesComponent,
     children: [
       { path: "", component: ListComponent },
-      { path: "FromEvent", component: FromEventComponent }
+      { path: "FromEvent", component: FromEventComponent },
+      { path: "timerInterval", component: FromEventComponent }
+    ]
     ]
   }
   // {
