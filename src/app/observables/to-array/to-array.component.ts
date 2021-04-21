@@ -22,7 +22,7 @@ export class ToArrayComponent implements OnInit {
       )
       .subscribe(res => {
         console.log(res);
-        this.addEl.addList(PrintValue, "appendlist");
+        this.addEl.addList(res, "appendlist");
       });
   }
 }
