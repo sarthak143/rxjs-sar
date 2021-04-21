@@ -8,20 +8,17 @@ import { interval } from "rxjs/internal/observable/interval";
   styleUrls: ["./to-array.component.css"]
 })
 export class ToArrayComponent implements OnInit {
-  let Subs:Subscription;
-  obsMsg;
+  Subs: Subscription;
   constructor() {}
 
   ngOnInit() {
     const source = interval(1000);
     this.Subs = source.subscribe(res => {
       console.log(res);
-      this.obsMsg = "Video " + res;
-      this.addel.addList(this.obsMsg, "appendlist");
+
       if (res >= 5) {
         this.Subs.unsubscribe();
       }
     });
   }
 }
-
