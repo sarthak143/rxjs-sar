@@ -23,8 +23,20 @@ export class OfFromComponent implements OnInit {
       let jsonRes = JSON.stringify(res); //covert obj to json
       this.addel.addList(jsonRes, "appendlist2");
     });
-
+    // from is used for array as parameters
     const obs3 = from(["apple", "mango", "cherry"]);
+    obs3.subscribe(res => {
+      this.addel.addList(res, "appendlist3");
+    });
+
+    // from Promise
+
+    const promise = new Promise(res => {
+      setTimeout(() => {
+        res("resolved promiss");
+      }, 3000);
+    });
+    const obs4 = from(["apple", "mango", "cherry"]);
     obs3.subscribe(res => {
       this.addel.addList(res, "appendlist3");
     });
