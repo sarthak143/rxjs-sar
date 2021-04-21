@@ -14,7 +14,7 @@ import { AddListElementService } from "../../service/add-list-element.service";
   styleUrls: ["./from-event.component.css"]
 })
 export class FromEventComponent implements OnInit, AfterViewInit {
-  constructor(private AddListElementService:AddListElementService ) {}
+  constructor(private addEl: AddListElementService) {}
 
   @ViewChild("addBtn") addBtn: ElementRef;
 
@@ -24,7 +24,7 @@ export class FromEventComponent implements OnInit, AfterViewInit {
     fromEvent(this.addBtn.nativeElement, "click").subscribe(res => {
       console.log(res);
       let PrintValue = "List Item" + count++;
-      this.addList(PrintValue);
+      this.addEl.addList(PrintValue);
     });
   }
 }
