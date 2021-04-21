@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 })
 export class AddListElementService {
   constructor() {}
-  addList(PrintValue: string, elementid: string) {
+  addList(PrintValue, elementid: string) {
     let el = document.createElement("li");
     el.classList.add("list-group-item");
     el.innerText = PrintValue;

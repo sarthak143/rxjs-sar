@@ -8,6 +8,7 @@ import { AddListElementService } from "../../service/add-list-element.service";
   styleUrls: ["./of-from.component.css"]
 })
 export class OfFromComponent implements OnInit {
+  ObsMsg;
   constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
@@ -18,7 +19,9 @@ export class OfFromComponent implements OnInit {
 
     const obs2 = of({ a: "apple", b: "mango", c: "cherry" });
     obs2.subscribe(res => {
-     this.addel.addList(res,"appendlist1");
+      this.ObsMsg = res;
+      let jsonRes = JSON.stringify(res); //covert obj to json
+      this.addel.addList(jsonRes, "appendlist2");
     });
   }
 }
