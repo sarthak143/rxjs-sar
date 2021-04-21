@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { interval, Subscription, timer } from "rxjs";
 import { AddListElementService } from "../../service/add-list-element.service";
 
@@ -7,7 +7,7 @@ import { AddListElementService } from "../../service/add-list-element.service";
   templateUrl: "./timer-interval.component.html",
   styleUrls: ["./timer-interval.component.css"]
 })
-export class TimerIntervalComponent implements OnInit {
+export class TimerIntervalComponent implements OnInit, OnDestroy {
   obsMsg;
   videoSubs: Subscription;
   videoSubsAfterDelay: Subscription;
@@ -36,5 +36,9 @@ export class TimerIntervalComponent implements OnInit {
         this.videoSubsAfterDelay.unsubscribe();
       }
     });
+  }
+  ngOnDestroy() {
+    this.videoSubs.unsubscribe();
+    this.videoSubsAfterDelay.unsubscribe();
   }
 }
