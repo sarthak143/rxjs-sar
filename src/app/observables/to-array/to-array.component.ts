@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { interval } from "rxjs/internal/observable/interval";
 import { take, toArray } from "rxjs/operators";
+import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
   selector: "app-to-array",
@@ -10,15 +11,18 @@ import { take, toArray } from "rxjs/operators";
 })
 export class ToArrayComponent implements OnInit {
   Subs: Subscription;
-  constructor() {}
+  constructor(private addEl: AddListElementService) {}
 
   ngOnInit() {
     const source = interval(1000);
     this.Subs = source
-    .pipe(take(5),
-      toArray())
-    .subscribe(res => {
-      console.log(res);
-    });
+      .pipe(
+        take(5),
+        toArray()
+      )
+      .subscribe(res => {
+        console.log(res);
+        this.addEl.addList(PrintValue, "appendlist");
+      });
   }
 }
