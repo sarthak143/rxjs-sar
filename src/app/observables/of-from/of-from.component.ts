@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-of-from',
-  templateUrl: './of-from.component.html',
-  styleUrls: ['./of-from.component.css']
+  selector: "app-of-from",
+  templateUrl: "./of-from.component.html",
+  styleUrls: ["./of-from.component.css"]
 })
 export class OfFromComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -8,6 +8,7 @@ import { ObservablesComponent } from "./observables/observables.component";
 import { FromEventComponent } from "./observables/fromevent/fromevent.component";
 import { ListComponent } from "./observables/list/list.component";
 import { TimerIntervalComponent } from "./observables/timer-interval/timer-interval.component";
+import { OfFromComponent } from "./observables/of-from/of-from.component";
 
 export const routes: Routes = [
   { path: "promise", component: PromiseComponent },
@@ -17,7 +18,8 @@ export const routes: Routes = [
     children: [
       { path: "", component: ListComponent },
       { path: "FromEvent", component: FromEventComponent },
-      { path: "timerInterval", component: TimerIntervalComponent }
+      { path: "timerInterval", component: TimerIntervalComponent },
+      { path: "OfFromComponent", component: TimerIntervalComponent }
     ]
   }
   // {
