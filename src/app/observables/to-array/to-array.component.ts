@@ -15,7 +15,7 @@ export class ToArrayComponent implements OnInit {
 
   ngOnInit() {
     // example 1
-    const source = interval(1000);
+    const source = interval(200);
     this.Subs = source
       .pipe(
         take(5),
