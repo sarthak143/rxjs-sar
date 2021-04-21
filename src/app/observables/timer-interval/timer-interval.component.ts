@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { interval, Subscription } from "rxjs";
+import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
   selector: "app-timer-interval",
@@ -9,7 +10,7 @@ import { interval, Subscription } from "rxjs";
 export class TimerIntervalComponent implements OnInit {
   obsMsg;
   videoSubs: Subscription;
-  constructor() {}
+  constructor(private addlist:AddListElementService) {}
 
   ngOnInit() {
     const broadcastVideo = interval(1000);
