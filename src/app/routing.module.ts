@@ -19,7 +19,7 @@ export const routes: Routes = [
       { path: "", component: ListComponent },
       { path: "FromEvent", component: FromEventComponent },
       { path: "timerInterval", component: TimerIntervalComponent },
-      { path: "OfFromComponent", component: TimerIntervalComponent }
+      { path: "OfFrom", component: OfFromComponent }
     ]
   }
   // {
