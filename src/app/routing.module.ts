@@ -10,6 +10,7 @@ import { ListComponent } from "./observables/list/list.component";
 import { TimerIntervalComponent } from "./observables/timer-interval/timer-interval.component";
 import { OfFromComponent } from "./observables/of-from/of-from.component";
 import { ToArrayComponent } from "./observables/to-array/to-array.component";
+import { MapComponent } from "./observables/map/map.component";
 
 export const routes: Routes = [
   {
@@ -26,6 +27,7 @@ export const routes: Routes = [
       { path: "FromEvent", component: FromEventComponent },
       { path: "timerInterval", component: TimerIntervalComponent },
       { path: "OfFrom", component: OfFromComponent },
+      { path: "map", component: MapComponent },
       { path: "ToArray", component: ToArrayComponent }
     ]
   },
