@@ -7,10 +7,11 @@ import { HelloComponent } from "./hello.component";
 import { HeaderComponent } from "./includes/header/header.component";
 import { RoutingModule } from "./routing.module";
 import { PromiseComponent } from "./promise/promise.component";
-import { PostsService } from './promise/posts.service';
-import { ObservablesComponent } from './observables/observables.component';
-import { FromEventComponent } from './observables/fromevent/fromevent.component';
-import { ListComponent } from './observables/list/list.component';
+import { PostsService } from "./promise/posts.service";
+import { ObservablesComponent } from "./observables/observables.component";
+import { FromEventComponent } from "./observables/fromevent/fromevent.component";
+import { ListComponent } from "./observables/list/list.component";
+import { AddListElementService } from "./service/add-list-element.service";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -24,6 +25,6 @@ import { ListComponent } from './observables/list/list.component';
     ListComponent
   ],
   bootstrap: [AppComponent],
-  providers: [PostsService]
+  providers: [PostsService, AddListElementService]
 })
 export class AppModule {}
