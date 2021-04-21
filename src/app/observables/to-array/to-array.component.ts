@@ -11,7 +11,7 @@ import { AddListElementService } from "../../service/add-list-element.service";
 })
 export class ToArrayComponent implements OnInit {
   Subs: Subscription;
-  constructor(private addEl: AddListElementService) {}
+  constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
     const source = interval(1000);
@@ -22,7 +22,12 @@ export class ToArrayComponent implements OnInit {
       )
       .subscribe(res => {
         console.log(res);
-        this.addEl.addList(res, "appendlist");
+        this.addel.addList(res, "appendlist");
       });
+
+    const obs1 = of("apple", "mango", "cherry");
+    obs1.subscribe(res => {
+      this.addel.addList(res, "appendlist1");
+    });
   }
 }
