@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { interval, Subscription } from "rxjs";
 import { take, toArray } from "rxjs/operators";
+import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
   selector: "app-map",
@@ -8,8 +9,8 @@ import { take, toArray } from "rxjs/operators";
   styleUrls: ["./map.component.css"]
 })
 export class MapComponent implements OnInit {
-Subs: Subscription;
-  constructor() {}
+  Subs: Subscription;
+  constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
     const source = interval(200);
