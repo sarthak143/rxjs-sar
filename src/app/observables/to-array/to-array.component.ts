@@ -26,7 +26,7 @@ export class ToArrayComponent implements OnInit {
       });
 
     const obs1 = of("apple", "mango", "cherry");
-    obs1.subscribe(res => {
+    obs1.pipe(toArray()).subscribe(res => {
       this.addel.addList(res, "appendlist1");
     });
   }
