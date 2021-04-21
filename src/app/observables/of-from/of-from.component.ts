@@ -40,5 +40,11 @@ export class OfFromComponent implements OnInit {
     obs4.subscribe(res => {
       this.addel.addList(res, "appendlist4");
     });
+
+    //from stringify
+    const obs5 = from("hello");
+    obs5.subscribe(res => {
+      this.addel.addList(res, "appendlist5");
+    });
   }
 }
