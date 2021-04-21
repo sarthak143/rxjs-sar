@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { of } from "rxjs";
+import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
   selector: "app-of-from",
@@ -6,7 +8,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./of-from.component.css"]
 })
 export class OfFromComponent implements OnInit {
-  constructor() {}
+  constructor(private addel: AddListElementService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const obs1 = of("apple", "mango", "cherry");
+    obs1.subscribe(res => {
+      this.addel.addList(res, "appendlist1");
+    });
+  }
 }
