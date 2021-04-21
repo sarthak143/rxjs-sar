@@ -16,7 +16,7 @@ export class TimerIntervalComponent implements OnInit {
     const broadcastVideo = interval(1000);
     this.videoSubs = broadcastVideo.subscribe(res => {
       console.log(res);
-      this.obsMsg = "Video" + res;
+      this.obsMsg = "Video " + res;
       this.addel.addList(this.obsMsg);
       if (res >= 5) {
         this.videoSubs.unsubscribe();
