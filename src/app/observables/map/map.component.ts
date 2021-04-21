@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { interval, Subscription } from "rxjs";
-import { take, toArray } from "rxjs/operators";
+import { map, take, toArray } from "rxjs/operators";
 import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
@@ -14,14 +14,9 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     const source = interval(200);
-    this.Subs = source
-      .pipe(
-        take(5),
-        toArray()
-      )
-      .subscribe(res => {
-        console.log(res);
-        this.addel.addList(res, "appendlist");
-      });
+    this.Subs = source.pipe(map(data => data * 10)).subscribe(res => {
+      console.log(res);
+      this.addel.addList(res, "appendlist");
+    });
   }
 }
