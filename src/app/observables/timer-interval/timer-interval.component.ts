@@ -10,12 +10,12 @@ import { AddListElementService } from "../../service/add-list-element.service";
 export class TimerIntervalComponent implements OnInit {
   obsMsg;
   videoSubs: Subscription;
+  videoSubsAfterDelay: Subscription;
   constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
+    //interval
     const broadcastVideo = interval(1000);
-    // timer(delay, interval) interval after a preset delay.
-    const broadcastVideoAfterDelay = timer(5000, 1000);
     this.videoSubs = broadcastVideo.subscribe(res => {
       console.log(res);
       this.obsMsg = "Video " + res;
@@ -24,12 +24,16 @@ export class TimerIntervalComponent implements OnInit {
         this.videoSubs.unsubscribe();
       }
     });
-    this.videoSubs = broadcastVideoAfterDelay.subscribe(res => {
+
+    //timer below
+    // timer(delay, interval) interval after a preset delay.
+    const broadcastVideoAfterDelay = timer(5000, 1000);
+    this.videoSubsAfterDelay = broadcastVideoAfterDelay.subscribe(res => {
       console.log(res);
       this.obsMsg = "Video " + res;
-      this.addel.addList(this.obsMsg, "appendlist");
+      this.addel.addList(this.obsMsg, "appendlist2");
       if (res >= 5) {
-        this.videoSubs.unsubscribe();
+        this.videoSubsAfterDelay.unsubscribe();
       }
     });
   }
