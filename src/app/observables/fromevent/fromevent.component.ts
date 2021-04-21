@@ -19,8 +19,17 @@ export class FromEventComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
   ngAfterViewInit() {
+    let count = 1;
     fromEvent(this.addBtn.nativeElement, "click").subscribe(res => {
       console.log(res);
+      let PrintValue = "video" + count++;
+      this.addList(PrintValue);
     });
+  }
+  addList(PrintValue) {
+    let el = document.createElement("li");
+    el.classList.add("list-group-item");
+    el.innerText = PrintValue;
+    document.getElementById("appendlist").appendChild(el);
   }
 }
