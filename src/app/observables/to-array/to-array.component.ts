@@ -14,6 +14,7 @@ export class ToArrayComponent implements OnInit {
   constructor(private addel: AddListElementService) {}
 
   ngOnInit() {
+    // example 1
     const source = interval(1000);
     this.Subs = source
       .pipe(
@@ -24,7 +25,7 @@ export class ToArrayComponent implements OnInit {
         console.log(res);
         this.addel.addList(res, "appendlist");
       });
-
+    // example 2
     const obs1 = of("apple", "mango", "cherry");
     obs1.pipe(toArray()).subscribe(res => {
       this.addel.addList(res, "appendlist1");
