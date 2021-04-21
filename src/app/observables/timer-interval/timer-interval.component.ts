@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { interval } from "rxjs";
+import { interval, Subscription } from "rxjs";
 
 @Component({
   selector: "app-timer-interval",
@@ -7,9 +7,18 @@ import { interval } from "rxjs";
   styleUrls: ["./timer-interval.component.css"]
 })
 export class TimerIntervalComponent implements OnInit {
+  obsMsg;
+  videoSubs: Subscription;
   constructor() {}
 
   ngOnInit() {
     const broadcastVideo = interval(1000);
+    this.videoSubs = broadcastVideo.subscribe(res => {
+      console.log(res);
+      this.obsMsg = "Video" + res;
+      if (res > 5) {
+        this.videoSubs.unsubscribe();
+      }
+    });
   }
 }
