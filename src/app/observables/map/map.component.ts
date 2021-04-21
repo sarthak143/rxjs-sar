@@ -31,9 +31,9 @@ export class MapComponent implements OnInit {
       { id: 2, name: "rahul" },
       { id: 3, name: "rohit" }
     ]);
-    members.pipe(map(data => data.name))
-    .subscribe(res=>(
-       this.addel.addList(res, "appendlist1");
-    ));
+    members.pipe(map(data => data.name)).subscribe(res => {
+      console.log(res);
+      this.addel.addList(res, "appendlist1");
+    });
   }
 }
