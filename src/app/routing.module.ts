@@ -11,6 +11,11 @@ import { TimerIntervalComponent } from "./observables/timer-interval/timer-inter
 import { OfFromComponent } from "./observables/of-from/of-from.component";
 
 export const routes: Routes = [
+  {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "/observables"
+  },
   { path: "promise", component: PromiseComponent },
   {
     path: "observables",
@@ -22,12 +27,7 @@ export const routes: Routes = [
       { path: "OfFrom", component: OfFromComponent }
     ]
   },
-  {
-    path: "",
-    pathMatch: "full",
-    redirectTo: "/observables"
-  },
-  // { path: "**", component: NotfoundComponent }
+  { path: "**",  redirectTo: "/observables" }
 ];
 
 @NgModule({
