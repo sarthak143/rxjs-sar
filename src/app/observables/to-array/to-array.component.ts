@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Subscription } from "rxjs";
+import { of, Subscription } from "rxjs";
 import { interval } from "rxjs/internal/observable/interval";
 import { take, toArray } from "rxjs/operators";
 import { AddListElementService } from "../../service/add-list-element.service";
