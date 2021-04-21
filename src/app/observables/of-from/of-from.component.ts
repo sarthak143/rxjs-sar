@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { of } from "rxjs";
+import { from, of } from "rxjs";
 import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
@@ -22,6 +22,11 @@ export class OfFromComponent implements OnInit {
       this.ObsMsg = res;
       let jsonRes = JSON.stringify(res); //covert obj to json
       this.addel.addList(jsonRes, "appendlist2");
+    });
+
+    const obs3 = from(["apple", "mango", "cherry"]);
+    obs3.subscribe(res => {
+      this.addel.addList(res, "appendlist3");
     });
   }
 }
