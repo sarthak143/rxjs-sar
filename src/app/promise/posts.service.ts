@@ -16,27 +16,27 @@ export class PostsService {
   data = [];
 
   constructor(private http: HttpClient) {}
-  // getPosts() {
-  //   const promise = new Promise((resolve, reject) => {
-  //     const apiURL = this.api;
-  //     this.http
-  //       .get<Post[]>(apiURL)
-  //       .toPromise()
-  //       .then(
-  //         (res: any) => {
-  //           // Success
-  //           this.data = res.map((res: any) => {
-  //             return new Post(res.userId, res.id, res.title, res.body);
-  //           });
-  //           // console.log(this.data);
-  //           resolve();
-  //         },
-  //         err => {
-  //           // Error
-  //           reject(err);
-  //         }
-  //       );
-  //   });
-  //   return promise;
-  // }
+  getPosts() {
+    const promise = new Promise((resolve, reject) => {
+      const apiURL = this.api;
+      this.http
+        .get<Post[]>(apiURL)
+        .toPromise()
+        .then(
+          (res: any) => {
+            // Success
+            this.data = res.map((res: any) => {
+              return new Post(res.userId, res.id, res.title, res.body);
+            });
+            // console.log(this.data);
+            resolve();
+          },
+          err => {
+            // Error
+            reject(err);
+          }
+        );
+    });
+    return promise;
+  }
 }
