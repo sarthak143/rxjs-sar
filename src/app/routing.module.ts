@@ -21,12 +21,12 @@ export const routes: Routes = [
       { path: "timerInterval", component: TimerIntervalComponent },
       { path: "OfFrom", component: OfFromComponent }
     ]
-  }
-  // {
-  //   path: "",
-  //   pathMatch: "full",
-  //   redirectTo: "/login"
-  // },
+  },
+  {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "/observables"
+  },
   // { path: "**", component: NotfoundComponent }
 ];
 
