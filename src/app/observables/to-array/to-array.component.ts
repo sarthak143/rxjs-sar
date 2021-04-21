@@ -13,8 +13,8 @@ export class ToArrayComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    const broadcastVideo = interval(1000);
-    this.Subs = broadcastVideo.subscribe(res => {
+    const source = interval(1000);
+    this.Subs = source.subscribe(res => {
       console.log(res);
       this.obsMsg = "Video " + res;
       this.addel.addList(this.obsMsg, "appendlist");
