@@ -22,7 +22,7 @@ export class FromEventComponent implements OnInit, AfterViewInit {
     let count = 1;
     fromEvent(this.addBtn.nativeElement, "click").subscribe(res => {
       console.log(res);
-      let PrintValue = "video" + count++;
+      let PrintValue = "ListItem" + count++;
       this.addList(PrintValue);
     });
   }
