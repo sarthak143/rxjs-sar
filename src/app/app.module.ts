@@ -12,6 +12,7 @@ import { ObservablesComponent } from "./observables/observables.component";
 import { FromEventComponent } from "./observables/fromevent/fromevent.component";
 import { ListComponent } from "./observables/list/list.component";
 import { AddListElementService } from "./service/add-list-element.service";
+import { TimerIntervalComponent } from './observables/timer-interval/timer-interval.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -22,7 +23,8 @@ import { AddListElementService } from "./service/add-list-element.service";
     PromiseComponent,
     ObservablesComponent,
     FromEventComponent,
-    ListComponent
+    ListComponent,
+    TimerIntervalComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
