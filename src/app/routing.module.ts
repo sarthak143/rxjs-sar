@@ -7,6 +7,7 @@ import { PromiseComponent } from "./promise/promise.component";
 import { ObservablesComponent } from "./observables/observables.component";
 import { FromEventComponent } from "./observables/fromevent/fromevent.component";
 import { ListComponent } from "./observables/list/list.component";
+import { TimerIntervalComponent } from "./observables/timer-interval/timer-interval.component";
 
 export const routes: Routes = [
   { path: "promise", component: PromiseComponent },
@@ -16,9 +17,8 @@ export const routes: Routes = [
     children: [
       { path: "", component: ListComponent },
       { path: "FromEvent", component: FromEventComponent },
-      { path: "timerInterval", component: FromEventComponent }
+      { path: "timerInterval", component: TimerIntervalComponent }
     ]
-    
   }
   // {
   //   path: "",
