@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { interval } from "rxjs/internal/observable/interval";
+import { take, toArray } from "rxjs/operators";
 
 @Component({
   selector: "app-to-array",
@@ -13,12 +14,11 @@ export class ToArrayComponent implements OnInit {
 
   ngOnInit() {
     const source = interval(1000);
-    this.Subs = source.subscribe(res => {
+    this.Subs = source
+    .pipe(take(5),
+      toArray())
+    .subscribe(res => {
       console.log(res);
-
-      if (res >= 5) {
-        this.Subs.unsubscribe();
-      }
     });
   }
 }
