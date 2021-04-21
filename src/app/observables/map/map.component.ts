@@ -14,9 +14,14 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     const source = interval(200);
-    this.Subs = source.pipe(map(data => data * 10)).subscribe(res => {
-      console.log(res);
-      this.addel.addList(res, "appendlist");
-    });
+    this.Subs = source
+      .pipe(
+        take(5),
+        map(data => "data transformed b4 subsription " + data * 10)
+      )
+      .subscribe(res => {
+        console.log(res);
+        this.addel.addList(res, "appendlist");
+      });
   }
 }
