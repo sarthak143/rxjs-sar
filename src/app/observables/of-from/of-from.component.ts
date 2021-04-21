@@ -15,5 +15,10 @@ export class OfFromComponent implements OnInit {
     obs1.subscribe(res => {
       this.addel.addList(res, "appendlist1");
     });
+
+    const obs2 = of({ a: "apple", b: "mango", c: "cherry" });
+    obs2.subscribe(res => {
+     this.addel.addList(res,"appendlist1");
+    });
   }
 }
