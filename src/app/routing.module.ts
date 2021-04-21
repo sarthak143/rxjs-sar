@@ -18,7 +18,7 @@ export const routes: Routes = [
       { path: "FromEvent", component: FromEventComponent },
       { path: "timerInterval", component: FromEventComponent }
     ]
-    ]
+    
   }
   // {
   //   path: "",
