@@ -29,14 +29,14 @@ export class OfFromComponent implements OnInit {
       this.addel.addList(res, "appendlist3");
     });
 
-    // from Promise
+    // from Promise to observaable
 
-    const promise = new Promise(res => {
+    const promiss = new Promise(res => {
       setTimeout(() => {
         res("resolved promiss");
       }, 3000);
     });
-    const obs4 = from(["apple", "mango", "cherry"]);
+    const obs4 = from(promiss);
     obs4.subscribe(res => {
       this.addel.addList(res, "appendlist4");
     });
