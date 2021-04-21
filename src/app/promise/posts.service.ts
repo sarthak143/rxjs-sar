@@ -17,7 +17,7 @@ export class PostsService {
 
   constructor(private http: HttpClient) {}
   getPosts() {
-    const promise = new Promise((resolve, reject) => {
+    const promise = new Promise<void>((resolve, reject) => {
       const apiURL = this.api;
       this.http
         .get<Post[]>(apiURL)
