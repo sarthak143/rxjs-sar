@@ -38,7 +38,7 @@ export class OfFromComponent implements OnInit {
     });
     const obs4 = from(["apple", "mango", "cherry"]);
     obs3.subscribe(res => {
-      this.addel.addList(res, "appendlist3");
+      this.addel.addList(res, "appendlist4");
     });
   }
 }
