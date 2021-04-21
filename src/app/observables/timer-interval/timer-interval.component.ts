@@ -16,7 +16,7 @@ export class TimerIntervalComponent implements OnInit {
     this.videoSubs = broadcastVideo.subscribe(res => {
       console.log(res);
       this.obsMsg = "Video" + res;
-      if (res > 5) {
+      if (res >= 5) {
         this.videoSubs.unsubscribe();
       }
     });
