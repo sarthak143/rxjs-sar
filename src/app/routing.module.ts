@@ -9,6 +9,7 @@ import { FromEventComponent } from "./observables/fromevent/fromevent.component"
 import { ListComponent } from "./observables/list/list.component";
 import { TimerIntervalComponent } from "./observables/timer-interval/timer-interval.component";
 import { OfFromComponent } from "./observables/of-from/of-from.component";
+import { ToArrayComponent } from "./observables/to-array/to-array.component";
 
 export const routes: Routes = [
   {
@@ -24,10 +25,11 @@ export const routes: Routes = [
       { path: "", component: ListComponent },
       { path: "FromEvent", component: FromEventComponent },
       { path: "timerInterval", component: TimerIntervalComponent },
-      { path: "OfFrom", component: OfFromComponent }
+      { path: "OfFrom", component: OfFromComponent },
+      { path: "ToArray", component: ToArrayComponent }
     ]
   },
-  { path: "**",  redirectTo: "/observables" }
+  { path: "**", redirectTo: "/observables" }
 ];
 
 @NgModule({
