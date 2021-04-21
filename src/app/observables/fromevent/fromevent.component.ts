@@ -26,10 +26,4 @@ export class FromEventComponent implements OnInit, AfterViewInit {
       this.addList(PrintValue);
     });
   }
-  addList(PrintValue: string) {
-    let el = document.createElement("li");
-    el.classList.add("list-group-item");
-    el.innerText = PrintValue;
-    document.getElementById("appendlist").appendChild(el);
-  }
 }
