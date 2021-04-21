@@ -6,6 +6,7 @@ import {
   ViewChild
 } from "@angular/core";
 import { fromEvent } from "rxjs";
+import { AddListElementService } from "../../service/add-list-element.service";
 
 @Component({
   selector: "app-from-event",
@@ -13,7 +14,7 @@ import { fromEvent } from "rxjs";
   styleUrls: ["./from-event.component.css"]
 })
 export class FromEventComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  constructor(private AddListElementService:AddListElementService ) {}
 
   @ViewChild("addBtn") addBtn: ElementRef;
 
