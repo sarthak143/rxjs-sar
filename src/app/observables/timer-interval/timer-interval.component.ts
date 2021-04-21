@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { interval } from "rxjs";
 
 @Component({
-  selector: 'app-timer-interval',
-  templateUrl: './timer-interval.component.html',
-  styleUrls: ['./timer-interval.component.css']
+  selector: "app-timer-interval",
+  templateUrl: "./timer-interval.component.html",
+  styleUrls: ["./timer-interval.component.css"]
 })
 export class TimerIntervalComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    const broadcastVideo = interval(1000);
   }
-
 }
