@@ -21,6 +21,9 @@ import { MergeMapComponent } from './observables/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observables/concat-map/concat-map.component';
 import { MergeComponent } from './observables/merge/merge.component';
 import { CatchTryErrorHandlingComponent } from './observables/catch-try-error-handling/catch-try-error-handling.component';
+import { DebounceTimeDistinctUnitChangedComponent } from './observables/debounce-time-distinct-unit-changed/debounce-time-distinct-unit-changed.component';
+import { ReplaySubjectComponent } from './observables/replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './observables/async-subject/async-subject.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -40,7 +43,10 @@ import { CatchTryErrorHandlingComponent } from './observables/catch-try-error-ha
     MergeMapComponent,
     ConcatMapComponent,
     MergeComponent,
-    CatchTryErrorHandlingComponent
+    CatchTryErrorHandlingComponent,
+    DebounceTimeDistinctUnitChangedComponent,
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
