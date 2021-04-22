@@ -53,8 +53,11 @@ export const routes: Routes = [
         component: DebounceTimeDistinctUnitChangedComponent
       },
       { path: "ReplaySubject", component: ReplaySubjectComponent },
-      { path: "fliter", component: FilterComponent },
-      { path: "fliter", component: FilterComponent },
+      { path: "AsyncSubject", component: AsyncSubjectComponent },
+      { path: "Reduce", component: ReduceComponent },
+      { path: "Tap", component: TapComponent },
+      { path: "FlatMap", component: FlatMapComponent },
+      { path: "Pluck", component: PluckComponent },
       { path: "ToArray", component: ToArrayComponent }
     ]
   },
