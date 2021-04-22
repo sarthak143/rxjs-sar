@@ -17,6 +17,10 @@ import { OfFromComponent } from './observables/of-from/of-from.component';
 import { ToArrayComponent } from './observables/to-array/to-array.component';
 import { MapComponent } from './observables/map/map.component';
 import { FilterComponent } from './observables/filter/filter.component';
+import { MergeMapComponent } from './observables/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observables/concat-map/concat-map.component';
+import { MergeComponent } from './observables/merge/merge.component';
+import { CatchTryErrorHandlingComponent } from './observables/catch-try-error-handling/catch-try-error-handling.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -32,7 +36,11 @@ import { FilterComponent } from './observables/filter/filter.component';
     OfFromComponent,
     ToArrayComponent,
     MapComponent,
-    FilterComponent
+    FilterComponent,
+    MergeMapComponent,
+    ConcatMapComponent,
+    MergeComponent,
+    CatchTryErrorHandlingComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
