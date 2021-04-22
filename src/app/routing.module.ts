@@ -42,11 +42,17 @@ export const routes: Routes = [
       { path: "map", component: MapComponent },
       { path: "fliter", component: FilterComponent },
       { path: "MergeMapComponent", component: MergeMapComponent },
-      { path: "fliter", component: FilterComponent },
-      { path: "fliter", component: FilterComponent },
-      { path: "fliter", component: FilterComponent },
-      { path: "fliter", component: FilterComponent },
-      { path: "fliter", component: FilterComponent },
+      { path: "ConcatMapComponent", component: ConcatMapComponent },
+      { path: "MergeComponent", component: MergeComponent },
+      {
+        path: "CatchTryErrorHandlingComponent",
+        component: CatchTryErrorHandlingComponent
+      },
+      {
+        path: "DebounceTime",
+        component: DebounceTimeDistinctUnitChangedComponent
+      },
+      { path: "ReplaySubject", component: ReplaySubjectComponent },
       { path: "fliter", component: FilterComponent },
       { path: "fliter", component: FilterComponent },
       { path: "ToArray", component: ToArrayComponent }
