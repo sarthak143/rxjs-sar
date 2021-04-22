@@ -16,6 +16,7 @@ import { TimerIntervalComponent } from './observables/timer-interval/timer-inter
 import { OfFromComponent } from './observables/of-from/of-from.component';
 import { ToArrayComponent } from './observables/to-array/to-array.component';
 import { MapComponent } from './observables/map/map.component';
+import { FilterComponent } from './observables/filter/filter.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -30,7 +31,8 @@ import { MapComponent } from './observables/map/map.component';
     TimerIntervalComponent,
     OfFromComponent,
     ToArrayComponent,
-    MapComponent
+    MapComponent,
+    FilterComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
