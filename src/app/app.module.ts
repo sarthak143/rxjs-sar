@@ -26,6 +26,8 @@ import { ReplaySubjectComponent } from './observables/replay-subject/replay-subj
 import { AsyncSubjectComponent } from './observables/async-subject/async-subject.component';
 import { ReduceComponent } from './observables/reduce/reduce.component';
 import { TapComponent } from './observables/tap/tap.component';
+import { FlatMapComponent } from './observables/flat-map/flat-map.component';
+import { PluckComponent } from './observables/pluck/pluck.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -50,7 +52,9 @@ import { TapComponent } from './observables/tap/tap.component';
     ReplaySubjectComponent,
     AsyncSubjectComponent,
     ReduceComponent,
-    TapComponent
+    TapComponent,
+    FlatMapComponent,
+    PluckComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
