@@ -41,11 +41,11 @@ export const routes: Routes = [
       { path: "OfFrom", component: OfFromComponent },
       { path: "map", component: MapComponent },
       { path: "fliter", component: FilterComponent },
-      { path: "MergeMapComponent", component: MergeMapComponent },
-      { path: "ConcatMapComponent", component: ConcatMapComponent },
-      { path: "MergeComponent", component: MergeComponent },
+      { path: "MergeMap", component: MergeMapComponent },
+      { path: "ConcatMap", component: ConcatMapComponent },
+      { path: "Merge", component: MergeComponent },
       {
-        path: "CatchTryErrorHandlingComponent",
+        path: "CatchTryErrorHandling",
         component: CatchTryErrorHandlingComponent
       },
       {
