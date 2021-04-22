@@ -24,6 +24,8 @@ import { CatchTryErrorHandlingComponent } from './observables/catch-try-error-ha
 import { DebounceTimeDistinctUnitChangedComponent } from './observables/debounce-time-distinct-unit-changed/debounce-time-distinct-unit-changed.component';
 import { ReplaySubjectComponent } from './observables/replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './observables/async-subject/async-subject.component';
+import { ReduceComponent } from './observables/reduce/reduce.component';
+import { TapComponent } from './observables/tap/tap.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RoutingModule, HttpClientModule],
@@ -46,7 +48,9 @@ import { AsyncSubjectComponent } from './observables/async-subject/async-subject
     CatchTryErrorHandlingComponent,
     DebounceTimeDistinctUnitChangedComponent,
     ReplaySubjectComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    ReduceComponent,
+    TapComponent
   ],
   bootstrap: [AppComponent],
   providers: [PostsService, AddListElementService]
