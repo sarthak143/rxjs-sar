@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  template: `
+    <h1>Tour of Heroes</h1>
+    <app-hero-main [hero]="hero"></app-hero-main>
+  `,
+  styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

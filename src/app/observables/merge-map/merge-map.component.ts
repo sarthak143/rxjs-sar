@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-merge-map',
-  templateUrl: './merge-map.component.html',
-  styleUrls: ['./merge-map.component.css']
+  template: `
+  <h1>Tour of Heroes</h1>
+  <app-hero-main [hero]="hero"></app-hero-main>
+`,
+  styleUrls: ['./merge-map.component.css'],
 })
 export class MergeMapComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
